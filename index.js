@@ -37,7 +37,23 @@ const countNonSpaces = (string) => {
     return count;
 };
 
+const removeShorterStrings = (array, length) => {
+    const returnArray = [];
+    for (const string of array) {
+        if (string.length >= length) {
+            returnArray.push(string);
+        }
+    }
+    return returnArray;
+};
+
 console.log(removeBlanks("This is a test"));
 console.log(getDigits("Thi3s 5is a6test"));
 console.log(acronym("Thi3s 5is - a6test"));
 console.log(countNonSpaces("this equals 12"));
+console.log(
+    removeShorterStrings(
+        ["Good morning", "sunshine", "the", "Earth", "says", "hello"],
+        4
+    )
+);
