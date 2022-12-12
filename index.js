@@ -27,6 +27,17 @@ const acronym = (string) => {
     return returnString;
 };
 
+const countNonSpaces = (string) => {
+    let count = 0;
+    for (const char of string) {
+        if (char !== " ") {
+            count++;
+        }
+    }
+    return count;
+};
+
 console.log(removeBlanks("This is a test"));
 console.log(getDigits("Thi3s 5is a6test"));
 console.log(acronym("Thi3s 5is - a6test"));
+console.log(countNonSpaces("this equals 12"));
